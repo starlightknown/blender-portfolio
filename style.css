@@ -26,6 +26,7 @@ header {
 
 #portfolio {
   position: relative;
+  
 }
 
 .outer_wrapper {
@@ -325,7 +326,7 @@ path {
 3D Typography 
 ============================*/
 .threeDtypo{
-  font-size: 6rem;
+  font-size: 4rem;
   color: #f2395a;
   text-transform: uppercase;
   -webkit-transform: skew(-5deg, -5deg) rotate(5deg);
@@ -346,7 +347,30 @@ path {
 }
 .text-container {
   position: fixed;
-  top: 20px;
+  top: 5px;
   left: 50%;
   transform: translateX(-50%);
 }
+
+/* Add this style for the scrolling portfolio */
+.scrolling-portfolio {
+  overflow-y: scroll;
+  height: calc(100vh - 150px); /* Adjust the height based on your design */
+  padding-top: 150px; /* Ensure space for the fixed elements */
+}
+
+/* Add more styles for your scrolling portfolio sections as needed */
+.scrolling-portfolio section {
+  padding: 50px;
+  background-color: rgba(255, 255, 255, 0.491); /* Semi-transparent background */
+  backdrop-filter: blur(10px); /* Apply a blur effect to simulate frosted glass */
+  margin: 20px;
+  border-radius: 10px; /* Add border-radius for rounded corners */
+}
+
+/* Add transition for a smooth effect */
+.scrolling-portfolio section:hover {
+  transition: backdrop-filter 0.3s ease-in-out;
+  backdrop-filter: blur(15px); /* Increase the blur on hover for a glassy effect */
+}
+
